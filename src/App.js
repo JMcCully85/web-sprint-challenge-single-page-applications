@@ -14,7 +14,7 @@ const initialFormValues = {
   sauce: "Original Red",
   pepperoni: false,
   threeCheese: false,
-  pinapple: false,
+  pineapple: false,
   sausage: false,
   name: "",
   special: "",
@@ -65,7 +65,7 @@ const App = () => {
       sauce: formValues.sauce.trim(),
       pepperoni: formValues.pepperoni,
       threeCheese: formValues.threeCheese,
-      pinapple: formValues.pinapple,
+      pineapple: formValues.pineapple,
       sausage: formValues.sausage,
 
       name: formValues.name.trim(),
