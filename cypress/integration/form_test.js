@@ -1,15 +1,10 @@
 //write tests here
 describe("Quotes app", () => {
   beforeEach(() => {
-    //arbitrary code we want running before our test run
     cy.visit("http://localhost:3000");
   });
 
   it("sanity test to make sure our tests work", () => {
-    //'expect' is an assertions
-    //there can be many assertions per test
-    //though inside the 'it' statement (the test),
-    //usually those assertions are logically grouped together
     expect(1 + 2).to.equal(3);
     expect(2 + 2).not.to.equal(5);
     expect({}).not.to.equal({}); //not strict (==)
@@ -45,7 +40,10 @@ describe("Quotes app", () => {
     cy.url().should("eq", "http://localhost:3000/pizza");
 
     submitBtn().should("be.disabled");
-    name().should("have.value", "").type("Jesse").should("have.value", "Jesse");
+    name()
+      .should("have.value", "")
+      .type("tony stark")
+      .should("have.value", "tony stark");
     submitBtn().should("be.disabled");
 
     special()
@@ -88,7 +86,10 @@ describe("Quotes app", () => {
     cy.url().should("eq", "http://localhost:3000/pizza");
     submitBtn().should("be.disabled");
     sizeDD().select("large").should("have.value", "large");
-    name().should("have.value", "").type("Jesse").should("have.value", "Jesse");
+    name()
+      .should("have.value", "")
+      .type("tony stark")
+      .should("have.value", "tony stark");
     submitBtn().should("be.enabled");
   });
 });

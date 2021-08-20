@@ -68,9 +68,6 @@ const App = () => {
       pinapple: formValues.pinapple,
       sausage: formValues.sausage,
 
-      // toppings: ["Pepperoni", "ThreeCheese", "Pinapple", "Sausage"].filter(
-      //   (topping) => formValues[topping]
-      // ),
       name: formValues.name.trim(),
       special: formValues.special.trim(),
     };
